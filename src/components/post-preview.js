@@ -1,6 +1,7 @@
 import React from 'react';
 import { css } from '@emotion/core';
 import { Link } from 'gatsby';
+import PropTypes from 'prop-types';
 import ReadLink from './read-link';
 
 const PostPreview = ({ post }) => (
@@ -22,5 +23,9 @@ const PostPreview = ({ post }) => (
     <ReadLink to={post.slug}>read this post &rarr;</ReadLink>
   </article>
 );
+
+PostPreview.propTypes = {
+  post: PropTypes.object.isRequired,
+};
 
 export default PostPreview;
