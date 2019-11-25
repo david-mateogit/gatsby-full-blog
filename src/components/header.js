@@ -28,7 +28,7 @@ const Header = () => (
       display: flex;
       justify-content: space-between;
       padding: 0.5rem 5vw;
-      @media (min-width: calc(550px + 10vw)) {
+      @media (min-width: 550px) {
         padding-left: calc((100vw - 550px - 0.5rem) / 2);
         padding-right: calc((100vw - 550px - 0.5rem) / 2);
       }
@@ -47,6 +47,9 @@ const Header = () => (
       </NavLink>
       <NavLink to="/about/" activeClassName="current-page">
         About
+      </NavLink>
+      <NavLink to="/contact/" activeClassName="current-page">
+        Contact
       </NavLink>
     </nav>
   </header>

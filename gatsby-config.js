@@ -2,6 +2,9 @@ module.exports = {
   siteMetadata: {
     title: 'Sosua Storage',
     description: `Sosua's first Self Storage Facility`,
+    image: '/images/sss.png',
+    url: 'https://www.sosuastorage.com',
+    instagramUsername: '@sosuaselfstorage',
   },
   plugins: [
     'gatsby-plugin-emotion',
@@ -30,6 +33,21 @@ module.exports = {
       options: {
         name: 'images',
         path: 'images',
+      },
+    },
+    {
+      resolve: 'gatsby-source-instagram',
+      options: {
+        username: 'sosuaselfstorage',
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-webpack-bundle-analyzer',
+      options: {
+        production: true,
+        disable: !process.env.ANALYZE_BUNDLE_SIZE,
+        generateStatsFile: true,
+        analyzerMode: 'static',
       },
     },
   ],

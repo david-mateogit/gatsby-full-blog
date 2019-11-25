@@ -22,7 +22,7 @@ const TextBox = styled('div')`
   width: 100%;
   margin-top: 0;
 
-  @media (min-width: calc(550px + 10vw)) {
+  @media (min-width: 550px) {
     padding-left: calc((100vw - 550px) / 2);
     padding-right: calc((100vw - 550px) / 2);
   }
